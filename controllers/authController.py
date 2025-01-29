@@ -9,6 +9,7 @@ class AuthController():
 
 
     def signUp(self, first_name: str, last_name: str, email: str, password: str):
+        print("sign up ; username : ", first_name, last_name, email, password)
         return self.auth_service.sighUp(first_name, last_name, email, password)
     
         

@@ -5,7 +5,7 @@ from sqlalchemy.orm import relationship
 class Resource(Base):
     __tablename__="resource"
 
-    id = Column(Integer, primary_key=True, default=(uuid.uuid4()))
+    id = Column(String, primary_key=True, default=(uuid.uuid4()))
     title = Column(String, nullable=False)
     link = Column(String, nullable=False)
     isDeleted  = Column(Boolean, default=False)

@@ -9,6 +9,6 @@ SessionLocal = sessionmaker(autocommit=False,autoflush=False,bind=engine)
 Base = declarative_base()
 
 def initDB():
-    from models.user_model import User
-    from models.resource_model import Resource
+    from database.models.user_model import User
+    from database.models.resource_model import Resource
     Base.metadata.create_all(bind=engine)

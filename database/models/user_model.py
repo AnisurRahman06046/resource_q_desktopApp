@@ -5,8 +5,8 @@ import uuid
 from sqlalchemy.orm import relationship
 
 class User(Base):
-    __tablename="users"
-    id = Column(Integer, primary_key=True,default=(uuid.uuid4()))
+    __tablename__="users"
+    id = Column(String, primary_key=True,default=(uuid.uuid4()))
     firstName = Column(String,nullable=False)
     lastName = Column(String,nullable=False)
     email = Column(String,unique=True,nullable=False)
