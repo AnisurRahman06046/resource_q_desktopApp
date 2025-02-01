@@ -18,7 +18,8 @@ class UserService():
         try:
             self.db.add(new_user)
             self.db.commit()
-            return HelperClass.responseJson("User created successfully",201,new_user.to_dict())
+            # return HelperClass.responseJson("User created successfully",201,new_user.to_dict())
+            return True,"User created successfully"
             
         except IntegrityError:
             self.db.rollback()
@@ -79,7 +80,7 @@ class UserService():
             self.db.commit()
             return True,"User is logged out"
         
-# print(UserService().create_user("John","Doe","john3@gmail.com","john1234"))
+# print(UserService().create_user("John","Doe","john8@gmail.com","john1234"))
 # print(UserService().get_user("a0c43f9e-d9b3-4e60-8da1-3d8b92b6e391"))
 # print(UserService().login_user("john3@gmail.com","john1234"))
 # print(UserService().logout_user())
